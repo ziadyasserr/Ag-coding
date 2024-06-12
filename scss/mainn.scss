@@ -1,0 +1,227 @@
+@import "variablres";
+
+
+
+body{
+    font-family: cursive;
+}
+
+section
+{
+    overflow-x: hidden;
+}
+
+.bg-section
+{
+    background-color: #F6F9FE;
+}
+
+.title-before{
+    background-color: #e7f1fd;
+}
+
+//******************************start nav******************************
+.navbar-light 
+{
+    .navbar-nav .nav-link
+    {
+        position: relative;
+        transition: 0.4s;
+        &::before
+        {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            left: 0;
+            bottom: 0;
+            background-color: $blue;
+            transition: inherit;
+        }
+        
+        &.active,
+        &:hover
+        {
+            color: $blue;
+            &::before
+            {
+                width: 100%;
+            }
+        }
+    }
+    
+    .navbar-toggler:focus
+    {
+        box-shadow: none;
+    }
+}
+//******************************end nav******************************
+
+
+//******************************start header******************************
+#header
+{
+    position: relative;
+    background: url(../img/hero-bg.jpg) center center/cover;
+    height: 75vh;
+    
+    &::before
+    {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: transparentize(#fff, 0.3);
+    }
+}
+//******************************model******************************
+#exampleModal
+{
+    &.fade .modal-dialog 
+{
+        transition: transform 0.5s ease-out;
+        transform: scale(0);
+}
+    &.show .modal-dialog {
+        transform: none;
+        
+}
+
+}
+//******************************end header******************************
+
+
+//******************************start-about******************************
+.icon-book
+{
+    width: 70px;
+    height: 70px;
+}
+//******************************end-about******************************
+
+
+//******************************start-progress******************************
+.progress-bar
+{
+    transition:   0.5s !important;
+}
+.trans
+{
+    transition: 0.5s !important;
+}
+.progress-bar-striped{
+    transition: 0.5s !important;
+}
+//******************************end-progress******************************
+
+
+//******************************start-services******************************
+.box-services
+{
+    margin-bottom: 20px;
+    .card-overlay
+    {
+        inset: 0;
+    }
+    & > *
+    {
+        position: relative;
+        transition: 0.5s;
+    }
+    &:hover
+    {
+        .card-overlay
+        {
+            top: 0 !important;
+        }
+        &> *
+        {
+        color: white !important;
+    }
+}
+}
+//******************************end-services******************************
+
+
+//******************************start-slider******************************
+.slider
+{
+    background: url(../img/testimonials-bg.jpg ) center center/cover;
+    &::before
+    {
+        content: "";
+        inset: 0;
+        position: absolute;
+        background-color: transparentize($color: #000000, $amount: 0.3);
+    }
+    #carouselExampleCaptions
+    {
+        height:350px ;
+    }
+}
+//******************************end-slider******************************
+
+
+//******************************start-contact******************************
+.contactt  
+{
+    border: 1px dashed;
+    
+}
+//******************************end-contact******************************
+
+
+//******************************start-filter******************************
+.filter-item
+{
+    >a
+    {
+        height: 350px;
+        &.hidden
+        {
+            display: none;
+        } 
+        &.active
+        {
+            display: block;
+            animation: shown 0.7s ease-in-out;
+        }
+        img
+        {
+            object-fit: contain;
+        }
+    }
+}
+
+@keyframes shown {
+    0%{
+        scale: (0);
+    }
+    100%{
+        scale: (1);
+    }
+}
+//******************************end-filter******************************
+
+
+//******************************start-footer******************************
+.link-style li
+{
+    position: relative;
+
+    &::before
+    {
+        position: absolute;
+        content: "";
+        border: 5px solid transparent;
+        border-left-color: $blue;
+        left: -20px;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+}
+
+.icon-list li
+{
+    margin-right: 16px;
+}
+//******************************end-footer******************************

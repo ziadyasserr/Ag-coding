@@ -1,0 +1,150 @@
+body {
+  font-family: cursive;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+.bg-section {
+  background-color: #F6F9FE;
+}
+
+.title-before {
+  background-color: #e7f1fd;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  transition: 0.4s;
+}
+.navbar-light .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background-color: #106eea;
+  transition: inherit;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
+  color: #106eea;
+}
+.navbar-light .navbar-nav .nav-link.active::before, .navbar-light .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#header {
+  position: relative;
+  background: url(../img/hero-bg.jpg) center center/cover;
+  height: 75vh;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#exampleModal.fade .modal-dialog {
+  transition: transform 0.5s ease-out;
+  transform: scale(0);
+}
+#exampleModal.show .modal-dialog {
+  transform: none;
+}
+
+.icon-book {
+  width: 70px;
+  height: 70px;
+}
+
+.progress-bar {
+  transition: 0.5s !important;
+}
+
+.trans {
+  transition: 0.5s !important;
+}
+
+.progress-bar-striped {
+  transition: 0.5s !important;
+}
+
+.box-services {
+  margin-bottom: 20px;
+}
+.box-services .card-overlay {
+  inset: 0;
+}
+.box-services > * {
+  position: relative;
+  transition: 0.5s;
+}
+.box-services:hover .card-overlay {
+  top: 0 !important;
+}
+.box-services:hover > * {
+  color: white !important;
+}
+
+.slider {
+  background: url(../img/testimonials-bg.jpg) center center/cover;
+}
+.slider::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider #carouselExampleCaptions {
+  height: 350px;
+}
+
+.contactt {
+  border: 1px dashed;
+}
+
+.filter-item > a {
+  height: 350px;
+}
+.filter-item > a.hidden {
+  display: none;
+}
+.filter-item > a.active {
+  display: block;
+  animation: shown 0.7s ease-in-out;
+}
+.filter-item > a img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+@keyframes shown {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.link-style li {
+  position: relative;
+}
+.link-style li::before {
+  position: absolute;
+  content: "";
+  border: 5px solid transparent;
+  border-left-color: #106eea;
+  left: -20px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.icon-list li {
+  margin-right: 16px;
+}
